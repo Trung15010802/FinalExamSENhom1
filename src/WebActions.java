@@ -1,0 +1,3 @@
+public enum WebActions {
+    MN
+}

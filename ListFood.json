@@ -1,0 +1,32 @@
+[
+  {
+    "ID": "ga01",
+    "Name": "ga beo",
+    "DonGia": 70000.0,
+    "Served": 0
+  },
+  {
+    "ID": "bo01",
+    "Name": "bo beo",
+    "DonGia": 150000.0,
+    "Served": 0
+  },
+  {
+    "ID": "ca01",
+    "Name": "ca loc",
+    "DonGia": 79000.0,
+    "Served": 0
+  },
+  {
+    "ID": "mxb01",
+    "Name": "mi xao bo",
+    "DonGia": 40000.0,
+    "Served": 0
+  },
+  {
+    "ID": "ga02",
+    "Name": "ga ran",
+    "DonGia": 30000.0,
+    "Served": 0
+  }
+]

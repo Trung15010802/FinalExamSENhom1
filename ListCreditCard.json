@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "Trung",
+    "ID": "123123",
+    "BonusPoint": 0
+  },
+  {
+    "Name": "Phu",
+    "ID": "12345",
+    "BonusPoint": 2000
+  },
+  {
+    "Name": "trong",
+    "ID": "1501",
+    "BonusPoint": 3000
+  },
+  {
+    "Name": "tam",
+    "ID": "147",
+    "BonusPoint": 0
+  }
+]
