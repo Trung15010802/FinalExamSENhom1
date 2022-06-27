@@ -13,15 +13,12 @@ public class ListTable {
     private JsonArray listFoodOrdered = new JsonArray();
     private static ListFood listFood = new ListFood();
 
-    public JsonArray getListFoodOrdered() {
-        return listFoodOrdered;
-    }
-
     public ListTable() {
         listTableMemory = read();
     }
 
-    JsonArray updateOrdered(String tableID, String idMonAn, int soLanGoiMon) { // <<== update
+    JsonArray updateOrdered(String tableID, String idMonAn, int soLanGoiMon) { // update danh sách món ăn thực khách
+                                                                               // chọn
         JsonObject food = listFood.search(idMonAn);
         if (food == null) {
             return null;
@@ -55,7 +52,7 @@ public class ListTable {
         return null;
     }
 
-    int searchTableIndex(JsonObject table) { // tìm bàn, trả về số thứ tự <<== new
+    int searchTableIndex(JsonObject table) { // tìm bàn, trả về số thứ tự
         for (int i = 0; i < listTableMemory.size(); i++) {
             JsonObject jsonObject = listTableMemory.get(i).getAsJsonObject();
             if (jsonObject == table)
@@ -64,7 +61,7 @@ public class ListTable {
         return -1;
     }
 
-    double tinhThanhTien(String idTable) { // <<== updated
+    double tinhThanhTien(String idTable) { // tính tiền cho bàn
         JsonObject jsonObject = searchTable(idTable);
         if (jsonObject == null) {
             return -1;
@@ -102,7 +99,7 @@ public class ListTable {
         return listDone;
     }
 
-    public JsonArray hienThiMonOder() { // trả về các món ăn đã gọi <<== new
+    public JsonArray hienThiMonOder() { // trả về các món ăn đã gọi
         JsonArray listUnDone = new JsonArray();
         for (int i = 0; i < listTableMemory.size(); i++) {
             JsonObject table = listTableMemory.get(i).getAsJsonObject();
@@ -124,7 +121,8 @@ public class ListTable {
         return listUnDone;
     }
 
-    public Boolean setFoodIntoTrue(String iDTable, String idMonAn) { // làm cho món ăn nó true <<== new
+    public Boolean setFoodIntoTrue(String iDTable, String idMonAn) { // đặt key "CheckDone" thành true tức món ăn đã
+                                                                     // xong
         boolean check = false;
         JsonObject table = searchTable(iDTable);
         if (table == null) {
@@ -147,7 +145,7 @@ public class ListTable {
 
     }
 
-    void renewAndUpdateListFood(String tableID) { // làm rỗng OrderedFood và update reserved trong FoodList <<== new
+    void renewAndUpdateListFood(String tableID) { // làm rỗng OrderedFood và update reserved trong FoodList 
         int tableIndex = searchTableIndex(searchTable(tableID));
         JsonObject jsonObject = listTableMemory.get(tableIndex).getAsJsonObject();
         JsonArray jsonArray = jsonObject.get("FoodOrdered").getAsJsonArray();
@@ -190,7 +188,7 @@ public class ListTable {
         return jsonArray;
     }
 
-    static void createListTable() {
+    static void createListTable() { // Tạo danh sách bàn mặc định với 30 bàn
         for (int i = 1; i <= 30; i++) {
             String idTable = "T" + i;
             JsonArray monAnOrdered = new JsonArray();

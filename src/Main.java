@@ -9,7 +9,7 @@ public class Main {
         try {
             while (true) {
                 UI ui = display();
-                Option(ui);
+                option(ui);
             }
         } catch (Exception e) {
             System.out.println("[ERROR] Có lỗi xảy ra vui lòng mở lại chương trình!");
@@ -47,7 +47,7 @@ public class Main {
         return null;
     }
 
-    static void Option(UI ui) {
+    static void option(UI ui) {
         do {
             String key = null;
             System.out.println("==============================");

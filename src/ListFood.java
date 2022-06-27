@@ -96,7 +96,7 @@ public class ListFood {
         return jsonArray;
     }
 
-    List<Object> hienThiMenu() {
+    List<Object> hienThiMenu() { //  Menu món ăn
         List<Object> menu = new ArrayList<>();
         JsonObject jsonObject = new JsonObject();
         Object object = new Object();
@@ -113,7 +113,7 @@ public class ListFood {
         return menu;
     }
 
-    List<Object> doanhThuVaMonAn() {
+    List<Object> doanhThuVaMonAn() { // Doanh thu và món ăn trong ngày
         List<Object> list = new ArrayList<>();
         double doanhthu = 0;
         for (int i = 0; i < listFoodMemory.size(); i++) {
