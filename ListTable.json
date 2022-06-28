@@ -2,15 +2,7 @@
   {
     "ID": "T1",
     "ThanhTien": 0.0,
-    "FoodOrdered": [
-      {
-        "Id": "ga01",
-        "Name": "ga beo",
-        "SoLuong": 10,
-        "DonGia": 70000.0,
-        "CheckDone": true
-      }
-    ]
+    "FoodOrdered": []
   },
   {
     "ID": "T2",

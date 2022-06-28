@@ -11,7 +11,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 public class ListFood {
-    JsonArray listFoodMemory = new JsonArray();
+    static JsonArray listFoodMemory = new JsonArray();
 
     public ListFood() {
         listFoodMemory = read();
